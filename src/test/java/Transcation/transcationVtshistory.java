@@ -84,11 +84,22 @@ public class transcationVtshistory extends baseLoginTest {
 		 Thread.sleep(3000);	
 		 Thread.sleep(3000);	
 		 WebDriverWait wait11=new WebDriverWait(driver, Duration.ofSeconds(30));
-			WebElement  Icnstop = wait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Stop']")));
-			Icnstop.click();		
+		WebElement  Icnstop = wait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Stop']")));
+		Icnstop.click();		
 		
 		
 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		
 		
 		
