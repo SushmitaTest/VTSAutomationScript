@@ -39,14 +39,12 @@ public class baseLoginTest {
            
      catch (Exception e) {
 
-        System.err.println("Exception diaplay setUp: " + e.getMessage());
+        System.err.println("Exception display: " + e.getMessage());
       
      
     }
     
-
-
-       
+    
 	
     }
 //@AfterMethod
@@ -54,6 +52,7 @@ public class baseLoginTest {
 
 		// -----logout btn----------------------------------------
 
+try{
 		Thread.sleep(3000);
 		WebDriverWait wait17 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement logoutp = wait17.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@data-toggle='dropdown'])[2]")));
@@ -67,7 +66,15 @@ public class baseLoginTest {
 		Thread.sleep(3000);
 		driver.quit();
 
+}
+catch(exception e)
+{
+System.err.println("Exception display " + e.getMessage());
+      
+}
 		
 	}*/
+
+
 
 }// end the class
