@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 
@@ -21,6 +22,9 @@ public class transcationVtshistory extends baseLoginTest {
 	public void vtshistory() throws InterruptedException
 	{
 		
+		 Login loginPage = new Login(driver);
+	        loginPage.loginTest("Admin", "Admin@123$");
+	        
 		WebDriverWait wait1 =new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement transmod =wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 		transmod.click();

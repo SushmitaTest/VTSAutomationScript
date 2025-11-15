@@ -10,13 +10,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 public class MasterDeviceConfi extends baseLoginTest {
 	@Test(priority = 2)
 	public void deviceAdd () throws InterruptedException
 	{
-		
+		 Login loginPage = new Login(driver);
+	        loginPage.loginTest("Admin", "Admin@123$");
 		//-----open the  master menu module----------------------------------------------
 		WebDriverWait wait51 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement mMenu = wait51.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));

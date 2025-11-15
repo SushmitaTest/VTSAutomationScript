@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 public class MasterSubscriptionMaster extends baseLoginTest  {
@@ -44,7 +45,8 @@ public String[][] getDATE()
 	public void addSubscription(String date ,String desc) throws InterruptedException, EncryptedDocumentException, IOException
 	{
 		
-	
+		 Login loginPage = new Login(driver);
+	        loginPage.loginTest("Admin", "Admin@123$");	
 	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement masterMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));
      masterMenu.click();

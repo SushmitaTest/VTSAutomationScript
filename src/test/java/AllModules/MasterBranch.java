@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 	public class MasterBranch extends baseLoginTest 
@@ -34,7 +35,8 @@ import Base.java.baseLoginTest;
 	        wb.close();
 	        fi.close();
 
-	       
+	        Login loginPage = new Login(driver);
+	        loginPage.loginTest("Admin", "Admin@123$");
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
 	        WebElement masterMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));

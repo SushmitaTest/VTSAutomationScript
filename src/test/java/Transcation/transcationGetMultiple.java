@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 public class transcationGetMultiple extends baseLoginTest { 
@@ -16,6 +17,11 @@ public class transcationGetMultiple extends baseLoginTest {
 	
 	public void vtsMultiple() throws InterruptedException
 	{
+		
+		 Login loginPage = new Login(driver);
+	        loginPage.loginTest("Admin", "Admin@123$");
+	        
+	        
 		WebElement transmod = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 		transmod.click();
 		WebElement getMultiple = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@class='tooltip-tip  tooltipster-disable'])[3]")));

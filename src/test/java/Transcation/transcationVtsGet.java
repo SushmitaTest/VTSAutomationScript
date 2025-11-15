@@ -10,13 +10,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 public class transcationVtsGet extends baseLoginTest {
 
 	@Test
 	public void vtsget() throws InterruptedException {
-
+		
+		
+		 Login loginPage = new Login(driver);
+	      loginPage.loginTest("Admin", "Admin@123$");
+	        
+		wait =new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement transmod = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 		transmod.click();
 
