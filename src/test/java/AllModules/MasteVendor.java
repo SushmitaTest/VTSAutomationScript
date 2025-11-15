@@ -10,6 +10,7 @@ import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 public class MasteVendor extends baseLoginTest{
@@ -17,7 +18,9 @@ public class MasteVendor extends baseLoginTest{
 	@Test
 	public void AddVendor() throws InterruptedException
 	
-	{
+	{  
+		Login loginPage = new Login(driver);
+    loginPage.loginTest("Admin", "Admin@123$");
 		
 		// -----open the master menu module----------------------------------------------
 				WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -99,6 +102,7 @@ public Object[][] getGmail() {
 		
 	
 	@Test(dataProvider="gmail")
+	
 	public void editVendor(String mail,String formats ) throws InterruptedException{
 		
 		 if(mail.equals("testgmail.com") || mail.equals("testng@gmailcom") || mail.equals("testng@test.com"))
@@ -106,6 +110,9 @@ public Object[][] getGmail() {
 	        throw new SkipException("Skipping test for data" );
 		 
 		 }
+		 Login loginPage = new Login(driver);
+	     loginPage.loginTest("Admin", "Admin@123$");
+		
 		
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement mMenu = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));

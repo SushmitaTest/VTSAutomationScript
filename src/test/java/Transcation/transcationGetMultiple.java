@@ -19,7 +19,7 @@ public class transcationGetMultiple extends baseLoginTest {
 	{
 		
 		 Login loginPage = new Login(driver);
-	        loginPage.loginTest("Admin", "Admin@123$");
+	     loginPage.loginTest("Admin", "Admin@123$");
 	        
 	        
 		WebElement transmod = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));

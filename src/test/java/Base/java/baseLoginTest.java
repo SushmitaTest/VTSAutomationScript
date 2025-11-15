@@ -21,13 +21,11 @@ public class baseLoginTest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://vtsodishav2.m-techinnovations.com/VTSGPSLogin.aspx");
+       driver.get("https://vtsodishav2.m-techinnovations.com/VTSGPSLogin.aspx");
+        
+      
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-  
-
-
-
-           /* driver.findElement(By.id("txtUserName1")).sendKeys("Admin");
+        /* driver.findElement(By.id("txtUserName1")).sendKeys("Admin");
 
             WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath("//input[@type='password'][1]")));

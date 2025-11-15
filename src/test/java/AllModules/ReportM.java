@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import Base.java.Login;
 import Base.java.baseLoginTest;
 
 
@@ -18,7 +19,8 @@ public class ReportM extends baseLoginTest
 	@Test
 	public void RDataPacketGridView() throws InterruptedException
 	{
-		
+		 Login loginPage = new Login(driver);
+	        loginPage.loginTest("Admin", "Admin@123$");
 		//----- open report module----------------------------------------
 		Thread.sleep(3000);
 		WebElement Report = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));

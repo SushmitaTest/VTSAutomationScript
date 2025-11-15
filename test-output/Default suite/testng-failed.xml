@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AllModules.MasterSubscriptionMaster">
+      <class name="Transcation.transcationRouteDefine">
         <methods>
           <include name="setUp"/>
-          <include name="addSubscription" invocation-numbers="0"/>
+          <include name="getRout"/>
         </methods>
-      </class> <!-- AllModules.MasterSubscriptionMaster -->
+      </class> <!-- Transcation.transcationRouteDefine -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
