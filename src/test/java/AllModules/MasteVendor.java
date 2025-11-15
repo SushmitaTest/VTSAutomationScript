@@ -18,6 +18,9 @@ public class MasteVendor extends baseLoginTest{
 	public void AddVendor() throws InterruptedException
 	
 	{
+		 Login loginPage = new Login(driver);
+     loginPage.loginTest("Admin", "Admin@123$");
+	
 		
 		// -----open the master menu module----------------------------------------------
 				WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
