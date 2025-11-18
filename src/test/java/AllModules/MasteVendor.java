@@ -18,9 +18,13 @@ public class MasteVendor extends baseLoginTest{
 	@Test
 	public void AddVendor() throws InterruptedException
 	
+
 	{  
 		Login loginPage = new Login(driver);
     loginPage.loginTest("Admin", "Admin@123$");
+
+	
+
 		
 		// -----open the master menu module----------------------------------------------
 				WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -79,7 +83,6 @@ public class MasteVendor extends baseLoginTest{
 				
 				WebElement clearbtn= wait8.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ID='ctl00_ContentPlaceHolder2_btnClear']")));
 				clearbtn.click();
-				Thread.sleep(3000);
 				
 		
 		

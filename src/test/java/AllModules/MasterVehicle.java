@@ -18,7 +18,12 @@ public class MasterVehicle extends baseLoginTest{
 	public void addVehicle() throws InterruptedException
 	{
 		 Login loginPage = new Login(driver);
+
 	        loginPage.loginTest("Admin", "Admin@123$");
+
+     loginPage.loginTest("Admin", "Admin@123$");
+	
+
 		WebDriverWait wait1=new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement mMenu =wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));		
 		mMenu.click();
