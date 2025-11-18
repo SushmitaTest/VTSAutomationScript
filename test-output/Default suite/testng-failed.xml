@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Transcation.TransactionRouteDefine">
+      <class name="Transcation.transcationStreetViewsidebyside">
         <methods>
           <include name="setUp"/>
-          <include name="createRouteTest"/>
+          <include name="showview"/>
         </methods>
-      </class> <!-- Transcation.TransactionRouteDefine -->
+      </class> <!-- Transcation.transcationStreetViewsidebyside -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

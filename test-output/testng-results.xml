@@ -2,40 +2,38 @@
 <testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-18T16:38:41 IST" name="Default suite" finished-at="2025-11-18T16:39:05 IST" duration-ms="23965">
+  <suite started-at="2025-11-18T18:19:27 IST" name="Default suite" finished-at="2025-11-18T18:20:15 IST" duration-ms="48116">
     <groups>
     </groups>
-    <test started-at="2025-11-18T16:38:41 IST" name="Default test" finished-at="2025-11-18T16:39:05 IST" duration-ms="23965">
-      <class name="Transcation.TransactionRouteDefine">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Transcation.TransactionRouteDefine@72057ecf]" started-at="2025-11-18T16:38:41 IST" name="setUp" finished-at="2025-11-18T16:38:46 IST" duration-ms="4980" status="PASS">
+    <test started-at="2025-11-18T18:19:27 IST" name="Default test" finished-at="2025-11-18T18:20:15 IST" duration-ms="48116">
+      <class name="Transcation.transcationStreetViewsidebyside">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Transcation.transcationStreetViewsidebyside@72057ecf]" started-at="2025-11-18T18:19:27 IST" name="setUp" finished-at="2025-11-18T18:19:32 IST" duration-ms="5291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createRouteTest()[pri:0, instance:Transcation.TransactionRouteDefine@72057ecf]" started-at="2025-11-18T16:38:46 IST" name="createRouteTest" finished-at="2025-11-18T16:39:05 IST" duration-ms="18941" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method signature="showview()[pri:0, instance:Transcation.transcationStreetViewsidebyside@72057ecf]" started-at="2025-11-18T18:19:32 IST" name="showview" finished-at="2025-11-18T18:20:15 IST" duration-ms="42788" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[stale element reference: stale element not found
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
   (Session info: chrome=142.0.7444.163)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e1fec4dbca961c859a7fb4a05065c7b5, isElementSelected {id=f.6599A593BE0058B525B2BAF74BC81CF0.d.053C7E37F22348845CE4A31201AB2754.e.139}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\cd03184\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51120}, goog:processID: 9660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51120/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e1fec4dbca961c859a7fb4a05065c7b5)] -> xpath: //input[@id='txtStartLocation']]
-Session ID: e1fec4dbca961c859a7fb4a05065c7b5]]>
+Command: [75d434befd4c0ce1dba75baf3171f71e, findElement {using=xpath, value=//gmp-internal-use-am[@position='18.60132655904383,73.73736891611262']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\cd03184\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54234}, goog:processID: 33824, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54234/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75d434befd4c0ce1dba75baf3171f71e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
   (Session info: chrome=142.0.7444.163)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e1fec4dbca961c859a7fb4a05065c7b5, isElementSelected {id=f.6599A593BE0058B525B2BAF74BC81CF0.d.053C7E37F22348845CE4A31201AB2754.e.139}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\cd03184\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51120}, goog:processID: 9660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51120/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e1fec4dbca961c859a7fb4a05065c7b5)] -> xpath: //input[@id='txtStartLocation']]
-Session ID: e1fec4dbca961c859a7fb4a05065c7b5
+Command: [75d434befd4c0ce1dba75baf3171f71e, findElement {using=xpath, value=//gmp-internal-use-am[@position='18.60132655904383,73.73736891611262']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\cd03184\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54234}, goog:processID: 33824, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54234/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75d434befd4c0ce1dba75baf3171f71e
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -46,10 +44,14 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.isSelected(RemoteWebElement.java:171)
-at Transcation.TransactionRouteDefines.createRoute(TransactionRouteDefines.java:51)
-at Transcation.TransactionRouteDefine.createRouteTest(TransactionRouteDefine.java:30)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at Transcation.transcationStreetViewsidebyside.showview(transcationStreetViewsidebyside.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -78,11 +80,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createRouteTest -->
-      </class> <!-- Transcation.TransactionRouteDefine -->
+        </test-method> <!-- showview -->
+      </class> <!-- Transcation.transcationStreetViewsidebyside -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
