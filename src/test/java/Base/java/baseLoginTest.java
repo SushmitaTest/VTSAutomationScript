@@ -2,15 +2,19 @@ package Base.java;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
 
 public class baseLoginTest {
 
@@ -19,8 +23,11 @@ public class baseLoginTest {
 
     @BeforeMethod
     public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+    driver = new ChromeDriver();
+      driver.manage().window().maximize();
+       
+    	
+       
        driver.get("https://vtsodishav2.m-techinnovations.com/VTSGPSLogin.aspx");
         
       
@@ -33,13 +40,12 @@ public class baseLoginTest {
            driver.findElement(By.id("btnLogin")).click(); */
     }
     
-  @Test
+  /*@Test
   public void testLogin() {
                 Login loginPage = new Login(driver);
                 loginPage.loginTest("Admin", "Admin@123$");
-                System.out.println("Login Successful");
-            }
-            
+                
+            }*/
             
     	
            

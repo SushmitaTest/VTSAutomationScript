@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Transcation.transcationStreetViewsidebyside">
+      <class name="Transcation.OTAcomand">
         <methods>
+          <include name="getCommand"/>
           <include name="setUp"/>
-          <include name="showview"/>
         </methods>
-      </class> <!-- Transcation.transcationStreetViewsidebyside -->
+      </class> <!-- Transcation.OTAcomand -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

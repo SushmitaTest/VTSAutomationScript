@@ -5,36 +5,41 @@
   <version>0.0.1-SNAPSHOT</version>
   
   <dependencies>
-    <!-- Selenium Java Dependency -->
+  
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>4.22.0</version>
     </dependency>
 
-    <!-- TestNG Dependency -->
-   <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.4.0</version>
-    <scope>test</scope>
-</dependency>
-    <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-devtools-v124</artifactId> 
-    <version>4.22.0</version>
-</dependency>
 
-<dependency>
-  <groupId>org.apache.poi</groupId>
-  <artifactId>poi</artifactId>
-  <version>5.4.1</version>  
-</dependency>
-<dependency>
-  <groupId>org.apache.poi</groupId>
-  <artifactId>poi-ooxml</artifactId>
-  <version>5.4.1</version>
-</dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.4.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    
+    <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>6.3.0</version>
+    </dependency>
+
+   
+ 
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>5.4.1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.4.1</version>
+    </dependency>
 </dependencies>
+
 
 </project>

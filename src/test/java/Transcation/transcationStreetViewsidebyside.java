@@ -1,5 +1,7 @@
 package Transcation;
 
+import java.awt.Desktop.Action;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,11 +32,16 @@ public class transcationStreetViewsidebyside extends baseLoginTest{
 	showviewicon.click();
 		
 WebElement moveicon=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//gmp-internal-use-am[@position='18.60132655904383,73.73736891611262']")));	
-moveicon.click();
-
-
+Actions act =new Actions(driver);
 
 	
+int moveX = 100;  
+int moveY = 180; 
+
+act.clickAndHold(moveicon) .moveByOffset(moveX, moveY) .release() .perform();
+
+
+
 	}	
 	
 	
