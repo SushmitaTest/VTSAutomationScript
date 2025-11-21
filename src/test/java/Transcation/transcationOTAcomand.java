@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import Base.java.Login;
 import Base.java.baseLoginTest;
 
-public class OTAcomand extends baseLoginTest 
+public class transcationOTAcomand extends baseLoginTest 
 {
 @Test
 	public void getCommand() throws InterruptedException
