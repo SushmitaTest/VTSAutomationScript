@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Transcation.transcationDashboard">
+      <class name="Transcation.transcationPointinterest">
         <methods>
-          <include name="dashboard"/>
           <include name="setUp"/>
+          <include name="getInterestCreate"/>
         </methods>
-      </class> <!-- Transcation.transcationDashboard -->
+      </class> <!-- Transcation.transcationPointinterest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
