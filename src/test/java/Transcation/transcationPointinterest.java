@@ -79,19 +79,16 @@ public void getInterestCreate() throws InterruptedException
 	    WebElement 	search= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='pac-input']")));    
 	    search.sendKeys("pune");
 	  
-	   
-	    
 	    WebElement 	savebtn= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@tabindex='10']")));    
 	    savebtn.click();
 	    
-	    
-	   
 	    WebElement 	acttext= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='ctl00_ContentPlaceHolder2_lblMsg']")));   
 	   String acmesg =acttext.getText().trim();
 	   System.out.println(acmesg);
 	    
 	    String exp ="Record Save Successfully ..!!";
 	    Assert.assertTrue(acmesg.equals(exp));
+	    
 	    
 	    
 	    

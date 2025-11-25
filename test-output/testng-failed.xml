@@ -6,7 +6,7 @@
       <class name="Utility.CreateUser">
         <methods>
           <include name="setUp"/>
-          <include name="getcreateUser" invocation-numbers="1"/>
+          <include name="getcreateUser"/>
         </methods>
       </class> <!-- Utility.CreateUser -->
     </classes>
