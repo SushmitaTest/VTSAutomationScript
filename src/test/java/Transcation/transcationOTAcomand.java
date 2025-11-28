@@ -16,7 +16,7 @@ import Base.java.baseLoginTest;
 public class transcationOTAcomand extends baseLoginTest 
 {
 @Test
-	public void getCommand() throws InterruptedException
+	public void Command() throws InterruptedException
 	{
 	Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");

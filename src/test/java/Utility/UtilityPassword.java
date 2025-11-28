@@ -3,19 +3,23 @@ package Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import Base.java.Login;
 import Base.java.baseLoginTest;
 
 public class UtilityPassword extends baseLoginTest { 
 	@Test
-	public void getPassword()
+	public void Password()
 	{
 	
 	   Login loginPage = new Login(driver);
        loginPage.loginTest("Admin", "Admin@123$");
 
+       
+       
        WebElement utility = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Utility']")));
        utility.click();
        WebElement createUser = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Change Password']")));
@@ -24,7 +28,7 @@ public class UtilityPassword extends baseLoginTest {
        oldpassword.sendKeys("admin@123$");
 		
 	
-       WebElement newpassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@tabindex='2']")));
+        WebElement newpassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@tabindex='2']")));
        newpassword.sendKeys("admin@123$");
 		
 	
@@ -35,9 +39,16 @@ public class UtilityPassword extends baseLoginTest {
     WebElement  btnsave1= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@tabindex='4']")));
     btnsave1 .click();
 			
-       
-       
-       
+    WebElement  textmsg= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='ctl00_ContentPlaceHolder2_lblMsg']")));
+    String ActualMessge=textmsg.getText().trim(); 
+    System.out.println(" act message is:"   +ActualMessge);
+   String expeMess="New Password and Old password same not allow..!";
+   System.out.println(" expt message is:"   +expeMess);
+   Assert.assertTrue(ActualMessge.equalsIgnoreCase(expeMess));
+    
+    
+   
+ 
        
        
        

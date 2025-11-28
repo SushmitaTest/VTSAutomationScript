@@ -2,17 +2,14 @@ package Base.java;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
@@ -54,12 +51,12 @@ public class baseLoginTest {
     
 	
    
-//@AfterMethod
-	/*public void logout() throws InterruptedException {
+/*@AfterMethod
+	public void logout() throws InterruptedException {
 
 		// -----logout btn----------------------------------------
 
-try{
+
 		Thread.sleep(3000);
 		WebDriverWait wait17 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement logoutp = wait17.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@data-toggle='dropdown'])[2]")));
@@ -73,15 +70,10 @@ try{
 		Thread.sleep(3000);
 		driver.quit();
 
-}
-catch(exception e)
-{
-System.err.println("Exception display " + e.getMessage());
-      
-}
-		
-	}*/
 
+		
+	
+}*/ //method
 
 
 }// end the class

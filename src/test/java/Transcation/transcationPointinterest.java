@@ -18,7 +18,7 @@ import Base.java.baseLoginTest;
 public class transcationPointinterest extends baseLoginTest
 {
 @Test	
-public void getInterestCreate() throws InterruptedException
+public void InterestCreate() throws InterruptedException
 {
 	Login loginPage = new Login(driver);
     loginPage.loginTest("Admin", "Admin@123$");

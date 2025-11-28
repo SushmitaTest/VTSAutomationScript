@@ -18,7 +18,7 @@ import Base.java.baseLoginTest;
 public class CreateUser extends baseLoginTest {
 
     @Test
-    public void getcreateUser() throws Exception {
+    public void createUser() throws Exception {
    
         Login loginPage = new Login(driver);
         loginPage.loginTest("Admin", "Admin@123$");
@@ -107,6 +107,7 @@ public class CreateUser extends baseLoginTest {
          File destFile = new File(dir3, "emptypasswordfeild.png");
          FileUtils.copyFile(srcFile, destFile);
    
+         
       
       
 
