@@ -14,7 +14,8 @@ import Base.java.baseLoginTest;
 public class Devicemaster extends baseLoginTest {
 	@Test
 	
-	public void getDevicemaster()
+	public void Devicemaster()
+
 	{
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
@@ -77,7 +78,10 @@ public class Devicemaster extends baseLoginTest {
    
      
 	 
-	 
+
+     
+     
+     
 	
 
 }
