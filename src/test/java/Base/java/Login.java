@@ -8,17 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login {
 	
-
     private WebDriver driver;
     private WebDriverWait wait;
     
-	
-		
 	       By usernameField = By.id("txtUserName1");
-		    By passwordField = By.xpath("//input[@type='password'][1]");
-		    By clickBtn     = By.id("btnLogin");
-		
-		
+		   By passwordField = By.xpath("//input[@type='password'][1]");
+		   By clickBtn     = By.id("btnLogin");
 		
 	 public Login(WebDriver driver) {
 	        this.driver = driver;
@@ -26,12 +21,15 @@ public class Login {
 	    }
 	 
 	 
-	public void loginTest(String username, String password)
+	public void loginTest(String username, String password) throws InterruptedException
 	{
-		
+		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField)).sendKeys(username);
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
+        Thread.sleep(1000);
         wait.until(ExpectedConditions.elementToBeClickable(clickBtn)).click();
+        
+       
     }
 	
 

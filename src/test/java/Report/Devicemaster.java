@@ -14,7 +14,7 @@ import Base.java.baseLoginTest;
 public class Devicemaster extends baseLoginTest {
 	@Test
 	
-	public void Devicemaster()
+	public void Devicemaster() throws InterruptedException
 
 	{
 	 Login loginPage = new Login(driver);

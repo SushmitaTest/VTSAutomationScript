@@ -16,7 +16,7 @@ import Base.java.baseLoginTest;
 public class transcationLive extends baseLoginTest {
 
 	@Test
-	public void cheVLive()
+	public void cheVLive() throws InterruptedException
 	{
 		 Login loginPage = new Login(driver);
 	        loginPage.loginTest("Admin", "Admin@123$");

@@ -13,7 +13,7 @@ import Base.java.baseLoginTest;
 
 public class transcationMenurights extends baseLoginTest {
 @Test 
-	public void menurights()
+	public void menurights() throws InterruptedException
 	{
 		
 		 Login loginPage = new Login(driver);

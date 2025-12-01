@@ -11,7 +11,7 @@ import Base.java.baseLoginTest;
 
 public class transcationVtsGetGeofences extends baseLoginTest{
 @Test
-	public void addgeofence()
+	public void addgeofence() throws InterruptedException
 	{
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");

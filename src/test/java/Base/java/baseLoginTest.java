@@ -3,9 +3,13 @@ package Base.java;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
@@ -15,19 +19,17 @@ public class baseLoginTest {
     public WebDriverWait wait;
 
     @BeforeMethod
-    public void setUp() {
-   // driver = new ChromeDriver();
+    public void setUp()
+    {
     	
-    	System.setProperty("webdriver.gecko.driver", "C:\\Users\\cd03184\\Downloads\\geckodriver.exe");
-    	WebDriver driver = new FirefoxDriver();
     	
-      driver.manage().window().maximize();
-       
+        // driver = new ChromeDriver();
+    
+    	WebDriverManager.firefoxdriver().setup();
+    	driver=new FirefoxDriver();
     	
-       
-       driver.get("https://vtsodishav2.m-techinnovations.com/VTSGPSLogin.aspx");
-        
-      
+        driver.manage().window().maximize();
+        driver.get("https://vtsodishav2.m-techinnovations.com/VTSGPSLogin.aspx");  
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         /* driver.findElement(By.id("txtUserName1")).sendKeys("Admin");
 
@@ -37,19 +39,14 @@ public class baseLoginTest {
            driver.findElement(By.id("btnLogin")).click(); */
     }
     
-  /*@Test
-  public void testLogin() {
+ /* @Test
+  public void testLogin() throws InterruptedException {
                 Login loginPage = new Login(driver);
                 loginPage.loginTest("Admin", "Admin@123$");
                 
             }*/
             
     	
-           
-  
-    
-    
-	
    
 /*@AfterMethod
 	public void logout() throws InterruptedException {

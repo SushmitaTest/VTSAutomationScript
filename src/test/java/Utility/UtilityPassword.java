@@ -12,7 +12,7 @@ import Base.java.baseLoginTest;
 
 public class UtilityPassword extends baseLoginTest { 
 	@Test
-	public void Password()
+	public void Password() throws InterruptedException
 	{
 	
 	   Login loginPage = new Login(driver);

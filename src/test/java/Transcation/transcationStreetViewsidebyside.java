@@ -14,7 +14,7 @@ import Base.java.baseLoginTest;
 public class transcationStreetViewsidebyside extends baseLoginTest{
 
 	@Test
-	public void showview()
+	public void showview() throws InterruptedException
 	{
 		 Login loginPage = new Login(driver);
 	      loginPage.loginTest("Admin", "Admin@123$");
