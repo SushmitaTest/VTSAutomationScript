@@ -10,9 +10,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import Base.java.Login;
-import Base.java.baseLoginTest;
-import net.bytebuddy.asm.Advice.Argument;
+import baseData.Login;
+import baseData.baseLoginTest;
 
 public class transcationGeofence extends baseLoginTest{
 	@Test

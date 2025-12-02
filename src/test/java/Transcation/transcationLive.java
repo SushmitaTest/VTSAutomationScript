@@ -1,7 +1,6 @@
 package Transcation;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,8 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import Base.java.Login;
-import Base.java.baseLoginTest;
+import baseData.Login;
+import baseData.baseLoginTest;
 
 public class transcationLive extends baseLoginTest {
 

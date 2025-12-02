@@ -1,11 +1,14 @@
-package Base.java;
+package baseData;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -39,16 +42,16 @@ public class baseLoginTest {
            driver.findElement(By.id("btnLogin")).click(); */
     }
     
- /* @Test
+ /*@Test
   public void testLogin() throws InterruptedException {
                 Login loginPage = new Login(driver);
                 loginPage.loginTest("Admin", "Admin@123$");
                 
-            }*/
+            }
             
     	
    
-/*@AfterMethod
+@AfterMethod
 	public void logout() throws InterruptedException {
 
 		// -----logout btn----------------------------------------
@@ -74,3 +77,6 @@ public class baseLoginTest {
 
 
 }// end the class
+
+
+

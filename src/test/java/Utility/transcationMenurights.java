@@ -1,15 +1,13 @@
 package Utility;
 
-import java.util.Iterator;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Base.java.Login;
-import Base.java.baseLoginTest;
+import baseData.Login;
+import baseData.baseLoginTest;
 
 public class transcationMenurights extends baseLoginTest {
 @Test 

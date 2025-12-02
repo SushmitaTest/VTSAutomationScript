@@ -5,10 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-import Base.java.Login;
-import Base.java.baseLoginTest;
+import baseData.Login;
+import baseData.baseLoginTest;
 
 public class UtilityPassword extends baseLoginTest { 
 	@Test

@@ -1,4 +1,4 @@
-package Report;
+package report;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,11 +9,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import Base.java.Login;
-import Base.java.baseLoginTest;
+import baseData.Login;
+import baseData.baseLoginTest;
 
 public class DriverReport extends baseLoginTest {
 	@Test

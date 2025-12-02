@@ -8,11 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import Base.java.Login;
-import Base.java.baseLoginTest;
-import dev.failsafe.internal.util.Durations;
+import baseData.Login;
+import baseData.baseLoginTest;
 
-public class MasterAlert extends  baseLoginTest {
+public class MasterAlert extends  baseLoginTest  {
 	
 @Test
 public void addAlert() throws InterruptedException

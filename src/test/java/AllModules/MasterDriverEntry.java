@@ -11,8 +11,8 @@ import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import Base.java.Login;
-import Base.java.baseLoginTest;
+import baseData.Login;
+import baseData.baseLoginTest;
 
 public class MasterDriverEntry extends baseLoginTest {
 

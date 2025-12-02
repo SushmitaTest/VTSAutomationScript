@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Report.DatewiseTravelHistory">
+      <class name="report.timewiseReport">
         <methods>
           <include name="setUp"/>
-          <include name="Overspeed"/>
+          <include name="datealert"/>
         </methods>
-      </class> <!-- Report.DatewiseTravelHistory -->
+      </class> <!-- report.timewiseReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
