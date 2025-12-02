@@ -1,0 +1,122 @@
+package report;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import baseData.Login;
+import baseData.baseLoginTest;
+
+public class Frame extends baseLoginTest {
+	
+@Test
+public void framepackets() throws InterruptedException
+{
+	
+	Login loginPage = new Login(driver);
+    loginPage.loginTest("Admin", "Admin@123$");
+    Thread.sleep(3000);
+    
+    WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='ctl00_Reportmenu']")));
+    Report.click();
+    WebElement scrollup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleStatusReport")));
+    JavascriptExecutor scroll =(JavascriptExecutor)driver;
+    scroll.executeScript("arguments[0].scrollIntoView({block:'center'});",scrollup);
+	
+    		Thread.sleep(3000);
+    		WebElement report = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));
+    		report.click();
+    		
+    		Thread.sleep(3000);
+    			WebElement vendorname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='ctl00_ContentPlaceHolder2_ddlVendorName']")));
+    			/*vendorname.click();
+    			Select dropdown = new Select(vendorname);
+    			dropdown.selectByIndex(2);*/
+    			Thread.sleep(3000);
+   
+    			WebElement Branchnamename = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@tabindex='2']")));
+    		 	/*Branchnamename .click();
+    		 	Select ddBname =new Select(Branchnamename );
+    		 	ddBname.selectByIndex(1);*/
+    		 	
+    			WebElement Vehiclenumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='ctl00_ContentPlaceHolder2_CmbVehicleName']")));
+    			Vehiclenumber.click();
+    			Thread.sleep(3000);
+    			Select dropdownvehicles = new Select(Vehiclenumber);
+    			dropdownvehicles .selectByIndex(10);
+    			Thread.sleep(3000);
+
+  
+    	 	Thread.sleep(3000); 
+    	 	WebElement framePackets = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_CmbFramePacketOption")));
+      framePackets.click();
+
+    		Select dropdownFpackets = new Select(framePackets);
+    		dropdownFpackets.selectByIndex(1);
+
+    	//
+    	
+    		WebElement datePicker1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
+    		datePicker1.clear();
+    		WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
+    		WebElement datePickerS = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
+    		datePickerS.sendKeys("03/11/2024");
+    		datePickerS.sendKeys(Keys.ENTER);
+
+  
+    		WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
+    		timeInput.clear();
+    		timeInput.sendKeys("00:11:am");
+    		
+    		WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
+    		datePickerS2.clear();
+    		datePickerS2.sendKeys("04/11/2024");
+    		datePickerS2.sendKeys(Keys.ENTER);
+
+  
+    		WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));
+    		timeout.clear();
+    		timeout.sendKeys("22:01:pm");
+
+    	
+    		Thread.sleep(3000);
+    		WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));
+    		WebElement rbtn = wait14.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='submit'])[1]")));
+    		rbtn.click();
+    		Thread.sleep(5000);
+   
+ 
+    	
+    	}//end testcase
+    	
+    	
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+	
+	
+}
+
+
+

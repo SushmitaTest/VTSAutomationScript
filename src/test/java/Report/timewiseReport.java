@@ -2,6 +2,7 @@ package report;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -10,15 +11,14 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class timewiseReport extends  baseLoginTest  
-{	
+public class timewiseReport extends baseLoginTest {
+	
 @Test
 public void datealert() throws InterruptedException
 {
 
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
-     
      Thread.sleep(1000);
  	
      WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='ctl00_Reportmenu']")));
@@ -33,8 +33,9 @@ public void datealert() throws InterruptedException
 	
 
      WebElement VendorName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_ddlVendorName")));
-      Select dropdownVendorName = new Select(VendorName);
-       int dropdownbName = dropdownVendorName.getOptions().size();
+     
+     
+    /*  Select dropdownVendorName = new Select(VendorName);int dropdownbName = dropdownVendorName.getOptions().size();
        for(int i=0; i<dropdownbName;i++)
        {
        	Thread.sleep(1000);
@@ -42,9 +43,9 @@ public void datealert() throws InterruptedException
        	dropdownVendorName = new Select(VendorName);
        	dropdownVendorName .selectByIndex(i);
        	
-       }
+       }*/
        WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_ddlBranchName")));
-       Select dropdownBranchName = new Select(BranchName);
+      /* Select dropdownBranchName = new Select(BranchName);
       int dropdownbName1 = dropdownBranchName.getOptions().size();
       for(int i=0; i<dropdownbName1;i++)
       {
@@ -52,9 +53,9 @@ public void datealert() throws InterruptedException
         BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_ddlBranchName")));
          dropdownBranchName = new Select(BranchName);
            dropdownBranchName.selectByIndex(i);
-      } 
+      } */
        WebElement vehicleNumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_CmbVehicleName")));
-  Select ddvehicleNumber =new  Select(vehicleNumber);
+ /* Select ddvehicleNumber =new  Select(vehicleNumber);
        int ddvehicleNumberS=ddvehicleNumber.getOptions().size();
        for(int i=0;i<ddvehicleNumberS;i++)
        {
@@ -64,7 +65,7 @@ public void datealert() throws InterruptedException
         ddvehicleNumber.selectByIndex(i) ;
        	
        	
-       }
+       }*/
        Thread.sleep(1000);
        WebElement datepicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtStartDate")));
        datepicker.click();
@@ -72,22 +73,42 @@ public void datealert() throws InterruptedException
        datepicker.sendKeys("01/12/2025");
 
        Thread.sleep(1000);
+       WebElement Starttime = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtstartTime")));
+       Starttime.click();
+       Starttime.clear();
+       Thread.sleep(1000);
+       Starttime.sendKeys(Keys.ENTER);
+       Starttime.sendKeys("12:01"); 
+       
+       
+       Thread.sleep(1000);
        WebElement datepickerTo = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtendDate")));
        datepickerTo.click();
        datepickerTo.clear();
        datepickerTo.sendKeys("01/12/2025");
+       
+       Thread.sleep(1000);
+       WebElement endtime = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtendTime")));
+       endtime.click();
+       endtime.clear();
+       Thread.sleep(1000);
+       endtime.sendKeys(Keys.ENTER);
+       endtime.sendKeys("16:01");
+       
        WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
        reportbtn.click();
   
       
       
       
-  
+       
      
      
      
      
      
+       
+       
 	
 	
 }
