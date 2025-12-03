@@ -1,4 +1,4 @@
-package AllModules;
+package masterMenu;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class MasterSubscriptionMaster extends baseLoginTest  {
+public class SubscriptionSetting extends baseLoginTest  {
 	
 @DataProvider(name="date")	
 public String[][] getDATE()
@@ -39,11 +39,12 @@ public String[][] getDATE()
 		
 		 Login loginPage = new Login(driver);
 	        loginPage.loginTest("Admin", "Admin@123$");	
+	        Thread.sleep(3000);
 	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement masterMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));
      masterMenu.click();
 	
-     //
+  
      WebDriverWait wait111 = new WebDriverWait(driver, Duration.ofSeconds(30));
      WebElement subscr = wait111.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Subscription Setting']")));
      subscr.click();
@@ -62,13 +63,13 @@ BRname1.click();
 	ddBRname.selectByIndex(1);*/
 			
 	
-	
+Thread.sleep(3000);
 	 WebDriverWait wait3= new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement Usname = wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='ctl00_ContentPlaceHolder2_CmbUser']")));
 Usname .click();
 	Select ddUsname  =new Select(Usname );
 	ddUsname.selectByIndex(2);
-	
+	Thread.sleep(3000);
 	 WebDriverWait wait4= new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement activeCheckbox = wait4.until(ExpectedConditions
 	    .visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_chkActive")));
@@ -83,16 +84,10 @@ WebDriverWait wait5= new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement validf = wait5.until(ExpectedConditions .visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtValidFrom']")));
 validf.click();
 validf.sendKeys(date);
-
-
-
-	
 WebDriverWait wait7= new WebDriverWait(driver, Duration.ofSeconds(30));	
 WebElement validtill = wait7.until(ExpectedConditions .visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtValidTill']")));
 validtill.click();
 validtill.sendKeys("10/11/2026");
-
-
 
 WebDriverWait wait75 =new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement save= wait75.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_btnSave']")));

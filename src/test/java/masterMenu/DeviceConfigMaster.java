@@ -1,4 +1,4 @@
-package AllModules;
+package masterMenu;
 
 import java.time.Duration;
 
@@ -12,12 +12,13 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class MasterDeviceConfi extends baseLoginTest {
+public class DeviceConfigMaster extends baseLoginTest {
 	@Test(priority = 2)
 	public void deviceAdd () throws InterruptedException
 	{
 		 Login loginPage = new Login(driver);
 	        loginPage.loginTest("Admin", "Admin@123$");
+	    	Thread.sleep(3000);
 		//-----open the  master menu module----------------------------------------------
 		WebDriverWait wait51 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement mMenu = wait51.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));

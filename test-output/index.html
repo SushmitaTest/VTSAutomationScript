@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\cd03184\AppData\Local\Temp\testng-eclipse-1557619685\testng-customsuite.xml</span>
+                    <span>C:\Users\cd03184\AppData\Local\Temp\testng-eclipse-953069808\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,7 +104,12 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="report.Frame" class="method navigator-link" hash-for-method="framepackets">framepackets</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="masterMenu.SubscriptionSetting" class="method navigator-link" hash-for-method="addSubscription(10/11/2025, valid)">addSubscription(10/11/2025, valid)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="masterMenu.SubscriptionSetting" class="method navigator-link" hash-for-method="addSubscription(32/11/2025, invalid)">addSubscription(32/11/2025, invalid)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,22 +127,23 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">report.Frame</span>
+              <span class="class-name">masterMenu.SubscriptionSetting</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="framepackets">
-                  </a> <!-- framepackets -->
-                  <span class="method-name">framepackets</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;input id=&quot;ctl00_ContentPlaceHolder2_btnReport&quot; class=&quot;btn btn-primary&quot; name=&quot;ctl00$ContentPlaceHolder2$btnReport&quot; type=&quot;submit&quot;&gt; is not clickable at point (599,460) because another element &lt;div id=&quot;preloader&quot;&gt; obscures it
+                  <a name="addSubscription(10/11/2025, valid)">
+                  </a> <!-- addSubscription(10/11/2025, valid) -->
+                  <span class="method-name">addSubscription</span>
+                  <span class="parameters">(10/11/2025, valid)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;select id=&quot;ctl00_ContentPlaceHolder2_ddlVendorName&quot; class=&quot;form-control&quot; name=&quot;ctl00$ContentPlaceHolder2$ddlVendorName&quot;&gt; is not clickable at point (455,134) because another element &lt;div id=&quot;preloader&quot;&gt; obscures it
 Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [5bb2fcdf-1061-4ef7-b591-e93cf4f8779a, clickElement {id=f811694b-cf61-4805-b703-b920dc61dd8b}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 25380, moz:profile: C:\Users\cd03184\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (5bb2fcdf-1061-4ef7-b591-e93cf4f8779a)] -&gt; xpath: (//input[@type=&apos;submit&apos;])[1]]
-Session ID: 5bb2fcdf-1061-4ef7-b591-e93cf4f8779a
+Command: [6294b7e0-4a04-4e10-807b-5b8df359cd2c, clickElement {id=9435cd88-2d04-4d0b-82e7-785883e9f8b3}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 28556, moz:profile: C:\Users\cd03184\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (6294b7e0-4a04-4e10-807b-5b8df359cd2c)] -&gt; xpath: //select[@id=&apos;ctl00_ContentPlaceHolder2_ddlVendorName&apos;]]
+Session ID: 6294b7e0-4a04-4e10-807b-5b8df359cd2c
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -150,7 +156,64 @@ Session ID: 5bb2fcdf-1061-4ef7-b591-e93cf4f8779a
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at report.Frame.framepackets(Frame.java:92)
+	at masterMenu.SubscriptionSetting.addSubscription(SubscriptionSetting.java:54)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addSubscription(32/11/2025, invalid)">
+                  </a> <!-- addSubscription(32/11/2025, invalid) -->
+                  <span class="method-name">addSubscription</span>
+                  <span class="parameters">(32/11/2025, invalid)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;select id=&quot;ctl00_ContentPlaceHolder2_ddlVendorName&quot; class=&quot;form-control&quot; name=&quot;ctl00$ContentPlaceHolder2$ddlVendorName&quot;&gt; is not clickable at point (455,134) because another element &lt;div id=&quot;preloader&quot;&gt; obscures it
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4e35e9ac-9e02-46cd-b05e-2f6740a454c3, clickElement {id=1f74aa2b-d3b9-421b-b7c4-f4c80240401e}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35320, moz:profile: C:\Users\cd03184\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (4e35e9ac-9e02-46cd-b05e-2f6740a454c3)] -&gt; xpath: //select[@id=&apos;ctl00_ContentPlaceHolder2_ddlVendorName&apos;]]
+Session ID: 4e35e9ac-9e02-46cd-b05e-2f6740a454c3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at masterMenu.SubscriptionSetting.addSubscription(SubscriptionSetting.java:54)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -186,7 +249,7 @@ Session ID: 5bb2fcdf-1061-4ef7-b591-e93cf4f8779a
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\cd03184\AppData\Local\Temp\testng-eclipse-1557619685\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\cd03184\AppData\Local\Temp\testng-eclipse-953069808\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,7 +258,7 @@ Session ID: 5bb2fcdf-1061-4ef7-b591-e93cf4f8779a
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;report.Frame&quot;/&gt;
+      &lt;class name=&quot;masterMenu.SubscriptionSetting&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -235,11 +298,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'framepackets')
-data.setCell(0, 2, 'report.Frame')
-data.setCell(0, 3, 65993);
+data.setCell(0, 1, 'addSubscription')
+data.setCell(0, 2, 'masterMenu.SubscriptionSetting')
+data.setCell(0, 3, 46017);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'addSubscription')
+data.setCell(1, 2, 'masterMenu.SubscriptionSetting')
+data.setCell(1, 3, 43209);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -270,7 +337,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">report.Frame</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">masterMenu.SubscriptionSetting</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
@@ -278,8 +345,18 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">framepackets</span>
-                <span class="method-start">8882 ms</span>
+                <span class="method-name">addSubscription(10/11/2025, valid)</span>
+                <span class="method-start">15512 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">61539 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addSubscription(32/11/2025, invalid)</span>
+                <span class="method-start">74967 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

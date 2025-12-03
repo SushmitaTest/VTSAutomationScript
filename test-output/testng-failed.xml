@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="report.Frame">
+      <class name="masterMenu.SubscriptionSetting">
         <methods>
-          <include name="framepackets"/>
           <include name="setUp"/>
+          <include name="addSubscription" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- report.Frame -->
+      </class> <!-- masterMenu.SubscriptionSetting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

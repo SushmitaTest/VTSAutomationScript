@@ -1,5 +1,5 @@
 package report;
-
+	
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -14,23 +14,24 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class Frame extends baseLoginTest {
+	public class FramepacketGridViewReport extends baseLoginTest {
 	
-@Test
-public void framepackets() throws InterruptedException
-{
-	
-	Login loginPage = new Login(driver);
-    loginPage.loginTest("Admin", "Admin@123$");
-    Thread.sleep(3000);
-    
-    WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='ctl00_Reportmenu']")));
-    Report.click();
-    WebElement scrollup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleStatusReport")));
-    JavascriptExecutor scroll =(JavascriptExecutor)driver;
-    scroll.executeScript("arguments[0].scrollIntoView({block:'center'});",scrollup);
-	
-    		Thread.sleep(3000);
+		@Test
+		public void framepacker() throws InterruptedException
+		{
+			
+			
+			Login loginPage = new Login(driver);
+		    loginPage.loginTest("Admin", "Admin@123$");
+		    Thread.sleep(3000);
+		    
+		    WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='ctl00_Reportmenu']")));
+		    Report.click();
+		    WebElement scrollup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleStatusReport")));
+		    JavascriptExecutor scroll =(JavascriptExecutor)driver;
+		    scroll.executeScript("arguments[0].scrollIntoView({block:'center'});",scrollup);
+			
+			Thread.sleep(3000);
     		WebElement report = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));
     		report.click();
     		
@@ -97,15 +98,23 @@ public void framepackets() throws InterruptedException
     		 WebElement export = wait14.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnExport")));
     		 export.click();
      		Thread.sleep(3000); 
-    		
- 
-    	
-    	}//end testcase
-    	
+     		
+			/*Thread.sleep(3000);
+			WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
+			WebElement clrbtn = wait15.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='submit'])[2]")));
+			clrbtn.click();
 
-	
-	
-}
-
+			// -----close btn----------------------------------------
+			Thread.sleep(3000);
+			WebDriverWait wait16 = new WebDriverWait(driver, Duration.ofSeconds(30));
+			WebElement adminbtn = wait16.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='submit'])[3]")));
+			adminbtn.click();*/
+		
+		
+		}//end testcase
+		
+		
+		
+	}
 
 

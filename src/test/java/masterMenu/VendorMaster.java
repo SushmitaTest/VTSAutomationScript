@@ -1,4 +1,4 @@
-package AllModules;
+package masterMenu;
 
 import java.time.Duration;
 
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class MasteVendor extends baseLoginTest{
+public class VendorMaster extends baseLoginTest{
 
 	@Test
 	public void AddVendor() throws InterruptedException
@@ -22,7 +22,7 @@ public class MasteVendor extends baseLoginTest{
 	{  
 		Login loginPage = new Login(driver);
     loginPage.loginTest("Admin", "Admin@123$");
-
+	Thread.sleep(3000);
 	
 
 		
@@ -90,7 +90,6 @@ public class MasteVendor extends baseLoginTest{
 	
 
 	
-	
 @DataProvider(name = "gmail")
 public Object[][] getGmail() {
 	        return new Object[][]{
@@ -101,8 +100,6 @@ public Object[][] getGmail() {
 	            {"testng@test.com", "valid "}
 	        };
 	    }
-
-		
 	
 	@Test(dataProvider="gmail")
 	

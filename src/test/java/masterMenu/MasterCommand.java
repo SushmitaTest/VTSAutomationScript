@@ -1,4 +1,4 @@
-package AllModules;
+package masterMenu;
 
 import java.time.Duration;
 

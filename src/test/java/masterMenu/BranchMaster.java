@@ -1,4 +1,4 @@
-package AllModules;
+package masterMenu;
 
 	
 import java.io.FileInputStream;
@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-	public class MasterBranch extends baseLoginTest 
+	public class BranchMaster extends baseLoginTest 
 	{
 
 	    @Test
@@ -37,20 +37,20 @@ import baseData.baseLoginTest;
 
 	        Login loginPage = new Login(driver);
 	        loginPage.loginTest("Admin", "Admin@123$");
+	        Thread.sleep(3000);
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
 	        WebElement masterMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));
 	        masterMenu.click();
 
 	        Thread.sleep(3000);
-
 	        WebElement branchMaster = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Branch Master']")));
 	        branchMaster.click();
-
+	        Thread.sleep(3000);
 	        WebElement vendorDropdown = wait.until(ExpectedConditions
 	 .visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_CmbVendorName")));
 	        Select ddvname = new Select(vendorDropdown);
 	        ddvname.selectByIndex(3);
+	        Thread.sleep(3000);
 WebElement branchCode = wait.until(ExpectedConditions .visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtBranchCode")));
 	        branchCode.sendKeys("BNTest00011");
 

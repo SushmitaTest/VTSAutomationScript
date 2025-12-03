@@ -1,4 +1,4 @@
-package AllModules;
+package masterMenu;
 
 import java.time.Duration;
 
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class MasterAlert extends  baseLoginTest  {
+public class AlertMaster extends  baseLoginTest  {
 	
 @Test
 public void addAlert() throws InterruptedException
@@ -19,6 +19,7 @@ public void addAlert() throws InterruptedException
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
 	
+     Thread.sleep(1000);
 	WebDriverWait wait51 = new WebDriverWait(driver, Duration.ofSeconds(30));
 	WebElement mMenu = wait51.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Master Menu']")));
 	mMenu.click();
