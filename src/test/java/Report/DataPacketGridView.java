@@ -1,5 +1,5 @@
 package report;
-
+	
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -14,25 +14,26 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class Frame extends baseLoginTest {
+	public class DataPacketGridView extends baseLoginTest {
 	
-@Test
-public void framepackets() throws InterruptedException
-{
-	
-	Login loginPage = new Login(driver);
-    loginPage.loginTest("Admin", "Admin@123$");
-    Thread.sleep(3000);
-    
-    WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='ctl00_Reportmenu']")));
-    Report.click();
-    WebElement scrollup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleStatusReport")));
-    JavascriptExecutor scroll =(JavascriptExecutor)driver;
-    scroll.executeScript("arguments[0].scrollIntoView({block:'center'});",scrollup);
-	
-    		Thread.sleep(3000);
-    		WebElement report = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));
-    		report.click();
+		@Test
+		public void framepacker() throws InterruptedException
+		{
+			
+			
+			Login loginPage = new Login(driver);
+		    loginPage.loginTest("Admin", "Admin@123$");
+		    Thread.sleep(3000);
+		    
+		    WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='ctl00_Reportmenu']")));
+		    Report.click();
+		    WebElement scrollup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleStatusReport")));
+		    JavascriptExecutor scroll =(JavascriptExecutor)driver;
+		    scroll.executeScript("arguments[0].scrollIntoView({block:'center'});",scrollup);
+			
+			Thread.sleep(3000);
+    		WebElement reportdata = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));
+    		 reportdata.click();
     		
     		Thread.sleep(3000);
     			WebElement vendorname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='ctl00_ContentPlaceHolder2_ddlVendorName']")));
@@ -66,6 +67,7 @@ public void framepackets() throws InterruptedException
     		WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
     		WebElement datePickerS = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
     		datePickerS.sendKeys("02/12/2025");
+    		
     		Thread.sleep(3000);
     		WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
     		timeInput.clear();
@@ -97,15 +99,23 @@ public void framepackets() throws InterruptedException
     		 WebElement export = wait14.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnExport")));
     		 export.click();
      		Thread.sleep(3000); 
-    		
- 
-    	
-    	}//end testcase
-    	
+     		
+			/*Thread.sleep(3000);
+			WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
+			WebElement clrbtn = wait15.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='submit'])[2]")));
+			clrbtn.click();
 
-	
-	
-}
-
+			// -----close btn----------------------------------------
+			Thread.sleep(3000);
+			WebDriverWait wait16 = new WebDriverWait(driver, Duration.ofSeconds(30));
+			WebElement adminbtn = wait16.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='submit'])[3]")));
+			adminbtn.click();*/
+		
+		
+		}//end testcase
+		
+		
+		
+	}
 
 

@@ -1,5 +1,5 @@
 package report;
-	
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -14,39 +14,40 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-	public class FramepacketGridViewReport extends baseLoginTest {
+public class FramepacketGridView extends baseLoginTest {
+	
 	
 		@Test
-		public void framepacker() throws InterruptedException
+		public void datapacket() throws InterruptedException
 		{
-			
-			
 			Login loginPage = new Login(driver);
 		    loginPage.loginTest("Admin", "Admin@123$");
 		    Thread.sleep(3000);
 		    
 		    WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='ctl00_Reportmenu']")));
 		    Report.click();
+			Thread.sleep(3000);
 		    WebElement scrollup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleStatusReport")));
 		    JavascriptExecutor scroll =(JavascriptExecutor)driver;
 		    scroll.executeScript("arguments[0].scrollIntoView({block:'center'});",scrollup);
 			
 			Thread.sleep(3000);
-    		WebElement report = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));
-    		report.click();
+    		WebElement framepacket = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@id='ctl00_liVTSFramePacketGridViewReport']")));
+    		framepacket.click();
     		
-    		Thread.sleep(3000);
-    			WebElement vendorname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='ctl00_ContentPlaceHolder2_ddlVendorName']")));
+    		
+    		    Thread.sleep(3000);
+    			WebElement vendorname = wait.until(ExpectedConditions.elementToBeClickable(By.id("ctl00_ContentPlaceHolder2_ddlVendorName")));
     			/*vendorname.click();
     			Select dropdown = new Select(vendorname);
-    			dropdown.selectByIndex(2);*/
-    			Thread.sleep(3000);
+    			dropdown.selectByIndex(2);
+    			Thread.sleep(3000);*/
    
-    			WebElement Branchnamename = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@tabindex='2']")));
-    		 	/*Branchnamename .click();
-    		 	Select ddBname =new Select(Branchnamename );
-    		 	ddBname.selectByIndex(1);*/
-    		 	
+    			WebElement Branchname= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@tabindex='2']")));
+    		    Branchname.click();
+    		 	Select ddBname =new Select(Branchname);
+    		 	ddBname.selectByIndex(1);
+    		
     			WebElement Vehiclenumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@tabindex='3'] ")));
     			Vehiclenumber.click();
     			Thread.sleep(1000);
@@ -57,32 +58,30 @@ import baseData.baseLoginTest;
     	 	Thread.sleep(3000); 
     	 	WebElement framePackets = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_CmbFramePacketOption")));
              framePackets.click();
-
-    		Select dropdownFpackets = new Select(framePackets);
+          Select dropdownFpackets = new Select(framePackets);
     		dropdownFpackets.selectByIndex(1);
 
-    	
-    		WebElement datePicker1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
-    		datePicker1.clear();
+   
     		WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
     		WebElement datePickerS = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
     		datePickerS.sendKeys("02/12/2025");
-    		datePickerS.sendKeys(Keys.ENTER);
+
+    	 	Thread.sleep(3000); 
     		WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
     		timeInput.clear();
-    		timeInput.sendKeys("00:11:am"); 
+    		timeInput.sendKeys("00:11"); 
     
-    		Thread.sleep(3000);
+    	Thread.sleep(3000);
     		WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
     		Thread.sleep(3000);
     		JavascriptExecutor datepicker2=(JavascriptExecutor)driver;
-    		datepicker2.executeScript("arguments[0].value='02/12/2025';",datePickerS2);
+    		datepicker2.executeScript("arguments[0].value='03/12/2025';",datePickerS2);
     
     		Thread.sleep(3000);
     		WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));
     		timeout.clear();
     		Thread.sleep(3000);
-    		timeout.sendKeys("10:01");
+    		timeout.sendKeys("15:01");
 
     		Thread.sleep(3000);
     		WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -97,7 +96,7 @@ import baseData.baseLoginTest;
     				 
     		 WebElement export = wait14.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnExport")));
     		 export.click();
-     		Thread.sleep(3000); 
+     		Thread.sleep(3000);  
      		
 			/*Thread.sleep(3000);
 			WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -110,11 +109,27 @@ import baseData.baseLoginTest;
 			WebElement adminbtn = wait16.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='submit'])[3]")));
 			adminbtn.click();*/
 		
-		
-		}//end testcase
-		
+    			
 		
 		
-	}
+		}
+    		
+}
+		
+		
 
 
+    		
+    		
+    		
+    				
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
