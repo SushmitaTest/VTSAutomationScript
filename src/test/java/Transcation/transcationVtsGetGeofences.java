@@ -1,4 +1,4 @@
-package Transcation;
+package transcation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class driverwiseVehicleassign extends baseLoginTest{  
+public class  DriverWiseVehicleAssign extends baseLoginTest{  
 @Test
  public void vehicleExpiry() throws InterruptedException
 
