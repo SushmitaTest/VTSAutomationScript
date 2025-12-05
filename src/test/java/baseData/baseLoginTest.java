@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,10 +27,10 @@ public class baseLoginTest {
     {
     	
     	
-        // driver = new ChromeDriver();
+       driver = new ChromeDriver();
     
-    	WebDriverManager.firefoxdriver().setup();
-    	driver=new FirefoxDriver();
+    	//WebDriverManager.firefoxdriver().setup();
+    	//driver=new FirefoxDriver();
     	
         driver.manage().window().maximize();
         driver.get("https://vtsodishav2.m-techinnovations.com/VTSGPSLogin.aspx");  

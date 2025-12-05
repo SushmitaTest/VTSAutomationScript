@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class transcationVtsGetGeofences extends baseLoginTest{
+public class GeofencesCreate extends baseLoginTest{
 @Test
 	public void addgeofence() throws InterruptedException
 	{

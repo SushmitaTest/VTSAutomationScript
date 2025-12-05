@@ -17,6 +17,7 @@ public class VehicleReport extends baseLoginTest{
 	{
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
+     Thread.sleep(1000);
      WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_Reportmenu")));
      Report .click();
     
@@ -62,10 +63,10 @@ public class VehicleReport extends baseLoginTest{
     	    dropdownvendorname.selectByIndex(i);
   	}*/
 	
-
-	 
+Thread.sleep(1000);
     WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
     reportbtn.click();
+
     
     
     

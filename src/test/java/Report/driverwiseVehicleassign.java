@@ -17,13 +17,14 @@ public class  DriverWiseVehicleAssign extends baseLoginTest{
 		{
 		 Login loginPage = new Login(driver);
 	     loginPage.loginTest("Admin", "Admin@123$");
+	     Thread.sleep(1000);
 	     WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_Reportmenu")));
 	     Report.click();
-	
+	     Thread.sleep(1000);
 	     WebElement scroll = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleOverSpeedR")));
 	JavascriptExecutor scrollup =(JavascriptExecutor)driver;
 	scrollup.executeScript("arguments[0].scrollIntoView({block:'center' });",scroll);	
-	
+	  Thread.sleep(1000);
 	 WebElement vehicleassignReport = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleAssignDriverwiseR")));
 	 vehicleassignReport.click();
 	 WebElement customername = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_ddlVendorName")));
@@ -36,7 +37,7 @@ public class  DriverWiseVehicleAssign extends baseLoginTest{
   	  dropdowncustomername = new Select(customername);
   	  dropdowncustomername.selectByIndex(i);
   	   }*/
-     
+	  Thread.sleep(1000);
    WebElement BranchName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_ddlBranchName")));
 /* Select dropdownBranchName = new Select(BranchName);
  int dropdownbName = dropdownBranchName.getOptions().size();
@@ -49,10 +50,10 @@ public class  DriverWiseVehicleAssign extends baseLoginTest{
  }*/
     	
 	
-	
+   Thread.sleep(1000);
 	 WebElement vehiclenumber= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_CmbVehicleName")));
      Select dropdownvehiclenumber = new Select(vehiclenumber );
-     
+     Thread.sleep(1000);
     int dropdownvehiclenumbers  =dropdownvehiclenumber.getOptions().size();
      for(int i=0;i<dropdownvehiclenumbers ;i++)
      {
@@ -63,10 +64,11 @@ public class  DriverWiseVehicleAssign extends baseLoginTest{
         
     	 
     	  }
-	 
-	 
-     WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
-     reportbtn.click();
+     Thread.sleep(1000);
+
+     WebElement reporbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
+     reporbtn.click();
+
    
 	
 	

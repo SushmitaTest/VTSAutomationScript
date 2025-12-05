@@ -20,7 +20,7 @@ public class DriverReport extends baseLoginTest {
 	{
 	Login loginPage = new Login(driver);
     loginPage.loginTest("Admin", "Admin@123$");
-	
+    Thread.sleep(1000);
     
     WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_Reportmenu")));
     Report .click();
@@ -69,14 +69,10 @@ public class DriverReport extends baseLoginTest {
 	   
 	   
    }*/
- 
+ Thread.sleep(1000);
  WebElement reporbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
  reporbtn.click();
-/*TakesScreenshot server = (TakesScreenshot) driver;
- File dir = new File("D:\\Sushmita.Project_Data\\1TestProjects\\3.vts\\AutomationScriptsData");
- File name = new File(dir, "servererror1.png");
- File srcFile = server.getScreenshotAs(OutputType.FILE);
- FileUtils.copyFile(srcFile, name);	*/
+
     
   Thread.sleep(1000);
   TakesScreenshot screenshot=(TakesScreenshot)driver;

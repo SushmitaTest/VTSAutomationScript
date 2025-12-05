@@ -18,6 +18,7 @@ public	class VehicleExpiryReport extends baseLoginTest{
 			{
 			 Login loginPage = new Login(driver);
 		     loginPage.loginTest("Admin", "Admin@123$");
+		     Thread.sleep(1000);
 		     WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_Reportmenu")));
 		     Report.click();
 		

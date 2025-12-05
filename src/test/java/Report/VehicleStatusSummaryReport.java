@@ -67,7 +67,7 @@ public class VehicleStatusSummaryReport extends baseLoginTest {
 		WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
 		Thread.sleep(3000);
 		JavascriptExecutor datepicker2=(JavascriptExecutor)driver;
-		datepicker2.executeScript("arguments[0].value='04/12/2025';",datePickerS2);
+		datepicker2.executeScript("arguments[0].value='05/12/2025';",datePickerS2);
 
 			Thread.sleep(3000);
 		WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));

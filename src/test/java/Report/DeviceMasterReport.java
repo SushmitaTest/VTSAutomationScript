@@ -19,7 +19,7 @@ public class DeviceMasterReport extends baseLoginTest {
      loginPage.loginTest("Admin", "Admin@123$");
 
      
-     
+     Thread.sleep(1000);
      WebElement Report = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_Reportmenu")));
      Report .click();
     
@@ -70,7 +70,7 @@ public class DeviceMasterReport extends baseLoginTest {
     	 
     	  }*/
 	 
-	 
+     Thread.sleep(1000);
      WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
      reportbtn.click();
    
