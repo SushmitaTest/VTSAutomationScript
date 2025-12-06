@@ -53,23 +53,22 @@ public void addAlert() throws InterruptedException
       	chek.click();
       	
    	WebDriverWait wait6 =new WebDriverWait(driver,Duration.ofSeconds(30));
-    /*WebElement chek2 =wait6.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_CheckAllAlertType']")));
-      	chek2.click();*/
+   WebElement chek2 =wait6.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_CheckAllAlertType']")));
+      	chek2.click();
       	
      
-   	int  alertType = 13 ;
-      	
-      	for(int i =0;i<=alertType;i++)
+   /*	int  alertType = 13 ;
+     for(int i =0;i<=alertType;i++)
     	  
      {
          String nameValue="ctl00$ContentPlaceHolder2$chklistAlertType$" +i ;
     	  WebElement check2 =wait6.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='" +nameValue +"']")));
     	  check2.click();
     	  
-      }
-      	
+      }*/
+       	Thread.sleep(2000);
       WebDriverWait wait9 =new WebDriverWait(driver,Duration.ofSeconds(30));
-       WebElement savebtn =wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='submit'][1]")));
+       WebElement savebtn =wait9.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnSave")));
        savebtn.click();
    	
         

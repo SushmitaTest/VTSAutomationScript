@@ -1,5 +1,10 @@
 package report;
 
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
+
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -64,11 +69,37 @@ public class VehicleReport extends baseLoginTest{
   	}*/
 	
 Thread.sleep(1000);
-    WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
-    reportbtn.click();
+Thread.sleep(1000);
+WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(
+        By.id("ctl00_ContentPlaceHolder2_btnReport")));
+reportbtn.click();
 
-    
-    
+Thread.sleep(2000);
+
+
+
+
+
+for (String tab : driver.getWindowHandles()) {
+    driver.switchTo().window(tab);
+}
+
+String currentUrl = driver.getCurrentUrl();
+String expectedUrlPart = "VTSGPS_WebReportViwer.aspx?ReportName=VehicleMaster";
+String notFoundMessage = "Records found...!!";
+
+
+if (currentUrl.contains(expectedUrlPart)) {
+    assertTrue(true, "Report Loaded Successfully: " + currentUrl);
+} else {
+    fail(notFoundMessage + " - Report not opened.");
+}
+
+
+
+
+
+
     
 }
 

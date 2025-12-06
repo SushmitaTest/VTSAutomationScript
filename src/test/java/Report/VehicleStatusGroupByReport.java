@@ -59,22 +59,28 @@ public class VehicleStatusGroupByReport extends baseLoginTest {
 		 		   
 		 		   
 		 	   }*/
+			
+		 	WebElement datePicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
+			Thread.sleep(3000);
+			JavascriptExecutor datepicker=(JavascriptExecutor)driver;
+			datepicker.executeScript("arguments[0].value='01/12/2025';",datePicker);
+			
 		 	Thread.sleep(3000); 
 			WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
 			timeInput.clear();
-			timeInput.sendKeys("00:11"); 
+			timeInput.sendKeys("00:11:AM"); 
 
 		Thread.sleep(3000);
 			WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
 			Thread.sleep(3000);
 			JavascriptExecutor datepicker2=(JavascriptExecutor)driver;
-			datepicker2.executeScript("arguments[0].value='04/12/2025';",datePickerS2);
+			datepicker2.executeScript("arguments[0].value='06/12/2025';",datePickerS2);
 
 				Thread.sleep(3000);
 			WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));
 			timeout.clear();
 			Thread.sleep(3000);
-			timeout.sendKeys("15:01");
+			timeout.sendKeys("15:01:PM");
 
 			Thread.sleep(3000);
 			WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));

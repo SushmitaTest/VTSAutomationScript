@@ -64,24 +64,24 @@ public class FramePacketGridViewReport extends baseLoginTest {
    
     		WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
     		WebElement datePickerS = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
-    		datePickerS.sendKeys("04/12/2025");
+    		datePickerS.sendKeys("06/12/2025");
 
     	 	Thread.sleep(3000); 
     		WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
     		timeInput.clear();
-    		timeInput.sendKeys("00:11"); 
+    		timeInput.sendKeys("00:11:am"); 
     
     	Thread.sleep(3000);
     		WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
     		Thread.sleep(3000);
     		JavascriptExecutor datepicker2=(JavascriptExecutor)driver;
-    		datepicker2.executeScript("arguments[0].value='04/12/2025';",datePickerS2);
+    		datepicker2.executeScript("arguments[0].value='06/12/2025';",datePickerS2);
     
     		Thread.sleep(3000);
     		WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));
     		timeout.clear();
     		Thread.sleep(3000);
-    		timeout.sendKeys("15:01");
+    		timeout.sendKeys("15:01:pm");
 
     		Thread.sleep(3000);
     		WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));

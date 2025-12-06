@@ -31,8 +31,8 @@ public void framepackets() throws InterruptedException
     scroll.executeScript("arguments[0].scrollIntoView({block:'center'});",scrollup);
 	
     		Thread.sleep(3000);
-    		WebElement report = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));
-    		report.click();
+    		WebElement framepackets = driver.findElement(By.id("ctl00_liVTSFramePacketReport"));
+    		framepackets.click();
     		
     		Thread.sleep(3000);
     			WebElement vendorname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='ctl00_ContentPlaceHolder2_ddlVendorName']")));
@@ -65,23 +65,23 @@ public void framepackets() throws InterruptedException
     		datePicker1.clear();
     		WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
     		WebElement datePickerS = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
-    		datePickerS.sendKeys("02/12/2025");
+    		datePickerS.sendKeys("06/12/2025");
     		Thread.sleep(3000);
     		WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
     		timeInput.clear();
-    		timeInput.sendKeys("00:11"); 
+    		timeInput.sendKeys("00:11:am"); 
     
     		Thread.sleep(3000);
     		WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
     		Thread.sleep(3000);
     		JavascriptExecutor datepicker2=(JavascriptExecutor)driver;
-    		datepicker2.executeScript("arguments[0].value='02/12/2025';",datePickerS2);
+    		datepicker2.executeScript("arguments[0].value='06/12/2025';",datePickerS2);
     
     		Thread.sleep(3000);
     		WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));
     		timeout.clear();
     		Thread.sleep(3000);
-    		timeout.sendKeys("10:01");
+    		timeout.sendKeys("15:01:pm");
 
     		Thread.sleep(3000);
     		WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -94,10 +94,11 @@ public void framepackets() throws InterruptedException
     		JavascriptExecutor footerscroll=(JavascriptExecutor) driver;
     		 footerscroll.executeScript("arguments[0].scrollIntoView({block:'center'});",reportbtn);
     				 
-    		 WebElement export = wait14.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnExport")));
-    		 export.click();
-     		Thread.sleep(3000); 
-    		
+    		 
+		     WebElement reportbtn1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
+		     reportbtn1.click();	
+		     
+		     
  
     	
     	}//end testcase

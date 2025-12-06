@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Help.LockScreen">
+      <class name="masterMenu.VehicleEntryMaster">
         <methods>
-          <include name="LockScreen"/>
           <include name="setUp"/>
+          <include name="addVehicle"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- Help.LockScreen -->
+      </class> <!-- masterMenu.VehicleEntryMaster -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

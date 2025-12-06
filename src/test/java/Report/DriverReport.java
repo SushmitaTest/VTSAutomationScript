@@ -69,9 +69,9 @@ public class DriverReport extends baseLoginTest {
 	   
 	   
    }*/
- Thread.sleep(1000);
- WebElement reporbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
- reporbtn.click();
+ Thread.sleep(3000);
+ WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
+ reportbtn.click();
 
     
   Thread.sleep(1000);

@@ -1,5 +1,8 @@
 package report;
 
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -19,9 +22,9 @@ public class VehicleWiseOverSpeedReport extends baseLoginTest{
 
 	
 	@Test
-	 public void Overspeed() throws InterruptedException, IOException
+	 public void Overspeed() throws InterruptedException, IOException{
 
-		{
+		
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
      
@@ -96,7 +99,23 @@ FileUtils.copyFile(output, name);
 
 }
 
-	
+String message = "Records not found...!!";
+String pdfPath = "D:\\Sushmita.Project_Data\\1TestProjects\\3.vts\\AutomationScriptsData\\VehicleOverSpeedReport.pdf";
+
+File pdfFile = new File(pdfPath);
+boolean pdfFound = pdfFile.exists();
+
+if (pdfFound) {
+ assertTrue(pdfFound, "PDF Found Successfully.");
+} else {
+ fail(message); 
+}
+
+
+
+
+
+
 
 
 }

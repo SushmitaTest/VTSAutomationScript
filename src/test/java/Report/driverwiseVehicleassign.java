@@ -52,7 +52,7 @@ public class  DriverWiseVehicleAssign extends baseLoginTest{
 	
    Thread.sleep(1000);
 	 WebElement vehiclenumber= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_CmbVehicleName")));
-     Select dropdownvehiclenumber = new Select(vehiclenumber );
+    /* Select dropdownvehiclenumber = new Select(vehiclenumber );
      Thread.sleep(1000);
     int dropdownvehiclenumbers  =dropdownvehiclenumber.getOptions().size();
      for(int i=0;i<dropdownvehiclenumbers ;i++)
@@ -63,7 +63,7 @@ public class  DriverWiseVehicleAssign extends baseLoginTest{
           dropdownvehiclenumber.selectByIndex(i);
         
     	 
-    	  }
+    	  }*/
      Thread.sleep(1000);
 
      WebElement reporbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));

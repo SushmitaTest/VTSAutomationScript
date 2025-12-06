@@ -48,7 +48,7 @@ public class baseLoginTest {
                 Login loginPage = new Login(driver);
                 loginPage.loginTest("Admin", "Admin@123$");
                 
-            }
+            }*/
             
     	
    
@@ -69,12 +69,14 @@ public class baseLoginTest {
 
 		// -----browser close----------------------------------------
 		Thread.sleep(3000);
-		driver.quit();
-
+		
+		
+		  driver.quit();  
+		   
 
 		
 	
-}*/ //method
+} //method
 
 
 }// end the class

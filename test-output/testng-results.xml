@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-05T17:26:21 IST" name="Default suite" finished-at="2025-12-05T17:26:43 IST" duration-ms="22797">
+  <suite started-at="2025-12-06T17:40:06 IST" name="Default suite" finished-at="2025-12-06T17:41:11 IST" duration-ms="65382">
     <groups>
     </groups>
-    <test started-at="2025-12-05T17:26:21 IST" name="Default test" finished-at="2025-12-05T17:26:43 IST" duration-ms="22797">
-      <class name="Help.LockScreen">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Help.LockScreen@71809907]" started-at="2025-12-05T17:26:21 IST" name="setUp" finished-at="2025-12-05T17:26:25 IST" duration-ms="4372" status="PASS">
+    <test started-at="2025-12-06T17:40:06 IST" name="Default test" finished-at="2025-12-06T17:41:11 IST" duration-ms="65382">
+      <class name="transcation.Dashboard">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:transcation.Dashboard@661972b0]" started-at="2025-12-06T17:40:06 IST" name="setUp" finished-at="2025-12-06T17:40:08 IST" duration-ms="1945" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LockScreen()[pri:0, instance:Help.LockScreen@71809907]" started-at="2025-12-05T17:26:25 IST" name="LockScreen" finished-at="2025-12-05T17:26:43 IST" duration-ms="18379" status="PASS">
+        <test-method signature="dashboard()[pri:0, instance:transcation.Dashboard@661972b0]" started-at="2025-12-06T17:40:08 IST" name="dashboard" finished-at="2025-12-06T17:41:01 IST" duration-ms="53431" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LockScreen -->
-      </class> <!-- Help.LockScreen -->
+        </test-method> <!-- dashboard -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:transcation.Dashboard@661972b0]" started-at="2025-12-06T17:41:01 IST" name="logout" finished-at="2025-12-06T17:41:11 IST" duration-ms="9963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- transcation.Dashboard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

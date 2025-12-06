@@ -77,23 +77,21 @@ public void TimeWiseDistance() throws InterruptedException
        Starttime.click();
        Starttime.clear();
        Thread.sleep(1000);
-       Starttime.sendKeys(Keys.ENTER);
-       Starttime.sendKeys("12:01"); 
+       Starttime.sendKeys("12:01:am"); 
        
        
        Thread.sleep(1000);
        WebElement datepickerTo = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtendDate")));
        datepickerTo.click();
        datepickerTo.clear();
-       datepickerTo.sendKeys("01/12/2025");
+       datepickerTo.sendKeys("06/12/2025");
        
        Thread.sleep(1000);
        WebElement endtime = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtendTime")));
        endtime.click();
        endtime.clear();
        Thread.sleep(1000);
-       endtime.sendKeys(Keys.ENTER);
-       endtime.sendKeys("16:01");
+       endtime.sendKeys("16:01:pm");
        
        WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
        reportbtn.click();

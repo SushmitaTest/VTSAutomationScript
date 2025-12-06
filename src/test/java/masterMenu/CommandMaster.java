@@ -44,14 +44,14 @@ public class CommandMaster  extends baseLoginTest {
 	//Thread.sleep(3000);
 		WebDriverWait wait5= new WebDriverWait(driver, Duration.ofSeconds(30));
 		/*WebElement comdType = wait5.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_chkCommandType_0']")));
-		comdType.click();
+		comdType.click();*/
 
 
 		Thread.sleep(3000);
 		WebElement comdType2 = wait5.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_chkCommandType_1']")));
-		comdType2.click();*/
+		comdType2.click();
 		 
-		int checkbox=3;
+	/*	int checkbox=3;
 		for(int i =0;i<checkbox;i++ )
 		{
 			
@@ -67,7 +67,7 @@ public class CommandMaster  extends baseLoginTest {
 				
 			}
 			
-		}
+		}*/
 		
 	
 		

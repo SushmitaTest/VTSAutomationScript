@@ -58,7 +58,7 @@ public class VehicleDistanceTravelReport extends baseLoginTest
 	     
 	     
 	       WebElement vehicleNumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_CmbVehicleName")));
-	      Select ddvehicleNumber =new  Select(vehicleNumber);
+	    /*  Select ddvehicleNumber =new  Select(vehicleNumber);
 	       int ddvehicleNumberS=ddvehicleNumber.getOptions().size();
 	       for(int i=0;i<ddvehicleNumberS;i++)
 	       {
@@ -68,7 +68,7 @@ public class VehicleDistanceTravelReport extends baseLoginTest
 	        ddvehicleNumber.selectByIndex(i) ;
 	       	
 	       	
-	       }
+	       }*/
 	       Thread.sleep(1000);
 	       WebElement datepicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtStartDate")));
 	       datepicker.click();
@@ -79,7 +79,7 @@ public class VehicleDistanceTravelReport extends baseLoginTest
 	       WebElement datepickerTo = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtendDate")));
 	       datepickerTo.click();
 	       datepickerTo.clear();
-	       datepickerTo.sendKeys("01/12/2025");
+	       datepickerTo.sendKeys("06/12/2025");
 	       
 	       
 	       WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));

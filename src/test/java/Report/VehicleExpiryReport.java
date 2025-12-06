@@ -23,8 +23,8 @@ public	class VehicleExpiryReport extends baseLoginTest{
 		     Report.click();
 		
 		     WebElement scroll = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleOverSpeedR")));
-		JavascriptExecutor scrollup =(JavascriptExecutor)driver;
-		scrollup.executeScript("arguments[0].scrollIntoView({ behavior:'auto', block:'center' });",scroll);
+		 JavascriptExecutor scrollup =(JavascriptExecutor)driver;
+		  scrollup.executeScript("arguments[0].scrollIntoView({ behavior:'auto', block:'center' });",scroll);
 
 		     WebElement vehicleExpiry = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_liVehicleExpiryReport")));
 		     vehicleExpiry.click();	
@@ -57,7 +57,7 @@ public	class VehicleExpiryReport extends baseLoginTest{
 		     
 
 		     WebElement vendorname= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_ddlBranchName")));
-		    Select dropdownvendorname = new Select(vendorname);
+		   /* Select dropdownvendorname = new Select(vendorname);
 		      int dropdownvname =dropdownvendorname.getOptions().size();
 		      Thread.sleep(1000);
 		      for(int i=0; i<dropdownvname ;i++)
@@ -66,7 +66,7 @@ public	class VehicleExpiryReport extends baseLoginTest{
 		     	    dropdownvendorname = new Select(vendorname);
 		     	    Thread.sleep(1000);
 		     	    dropdownvendorname.selectByIndex(i);
-		   	}
+		   	}*/
 		      
 		      
 		 	

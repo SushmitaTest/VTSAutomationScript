@@ -58,10 +58,14 @@ public class VehicleStatusSummaryReport extends baseLoginTest {
 	 		   
 	 		   
 	 	   }*/
+	 	WebElement datePicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
+		Thread.sleep(3000);
+		JavascriptExecutor datepicker=(JavascriptExecutor)driver;
+		datepicker.executeScript("arguments[0].value='01/12/2025';",datePicker);
 	 	Thread.sleep(3000); 
 		WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
 		timeInput.clear();
-		timeInput.sendKeys("00:11"); 
+		timeInput.sendKeys("00:11:am"); 
 
 	Thread.sleep(3000);
 		WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
@@ -73,7 +77,7 @@ public class VehicleStatusSummaryReport extends baseLoginTest {
 		WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));
 		timeout.clear();
 		Thread.sleep(3000);
-		timeout.sendKeys("15:01");
+		timeout.sendKeys("15:01:pm");
 
 		Thread.sleep(3000);
 		WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));

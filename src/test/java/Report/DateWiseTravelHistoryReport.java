@@ -74,7 +74,7 @@ public class DateWiseTravelHistoryReport extends baseLoginTest{
     WebElement datepickerTo = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_txtendDate")));
     datepickerTo.click();
     datepickerTo.clear();
-    datepickerTo.sendKeys("01/12/2025");
+    datepickerTo.sendKeys("06/12/2025");
     WebElement reportbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_ContentPlaceHolder2_btnReport")));
     reportbtn.click();
    
