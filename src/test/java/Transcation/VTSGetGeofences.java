@@ -1,6 +1,7 @@
 package transcation;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -9,14 +10,13 @@ import org.testng.annotations.Test;
 import baseData.Login;
 import baseData.baseLoginTest;
 
-public class GeofencesCreate extends baseLoginTest{
+public class VTSGetGeofences extends baseLoginTest{
 @Test
 	public void addgeofence() throws InterruptedException
 	{
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
-
-		
+     Thread.sleep(2000);
      WebElement transaction = wait.until( ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
      transaction.click();
 

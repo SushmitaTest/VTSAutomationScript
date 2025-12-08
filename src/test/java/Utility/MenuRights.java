@@ -16,7 +16,7 @@ public class MenuRights extends baseLoginTest {
 		
 		 Login loginPage = new Login(driver);
 	       loginPage.loginTest("Admin", "Admin@123$");
-	
+	       Thread.sleep(3000);
 	       WebElement utility = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Utility']")));
 	       utility.click();
 	      WebElement menu = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Menu Rights']")));

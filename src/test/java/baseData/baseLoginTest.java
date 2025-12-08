@@ -58,7 +58,7 @@ public class baseLoginTest {
 		// -----logout btn----------------------------------------
 
 
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		WebDriverWait wait17 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement logoutp = wait17.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@data-toggle='dropdown'])[2]")));
 		logoutp.click();
@@ -69,8 +69,7 @@ public class baseLoginTest {
 
 		// -----browser close----------------------------------------
 		Thread.sleep(3000);
-		
-		
+	
 		  driver.quit();  
 		   
 

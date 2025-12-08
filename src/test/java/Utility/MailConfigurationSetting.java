@@ -2,39 +2,34 @@ package utility;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import baseData.Login;
 import baseData.baseLoginTest;
 
 public class MailConfigurationSetting extends baseLoginTest{
-
+//as per discussion of developer cannot  be add new data
 	@Test
 	public void mailconfig() throws InterruptedException
 	{
 	
 	 Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
-
-     WebElement Report = driver.findElement(By.xpath("//li[@id='ctl00_Reportmenu']"));
-		Report.click();
+     Thread.sleep(3000);
+     WebElement utility = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Utility']")));
+     utility.click();
 		Thread.sleep(3000);
 
    
-		  WebElement Vname = driver.findElement(By.xpath("//span[text()='Device Master Report']"));
-		  Vname.click();
+		  WebElement mailconfig = driver.findElement(By.xpath("//span[text()='Mail Configuration Setting']"));
+		  mailconfig.click();
 		  
 		  
-  WebElement Vname1 = driver.findElement(By.xpath("//span[text()='Device Master Report']"));
-		  Vname1.click();
-		  	  
+ 
 		
 		
-		
-		
-		
-		
-		
+	
 		
      
 	}

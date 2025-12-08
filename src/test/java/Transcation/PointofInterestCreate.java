@@ -21,15 +21,13 @@ public void InterestCreate() throws InterruptedException
 {
 	Login loginPage = new Login(driver);
     loginPage.loginTest("Admin", "Admin@123$");
-    
+    Thread.sleep(2000);
     
     wait =new WebDriverWait(driver, Duration.ofSeconds(30));
 	WebElement transmod = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 	transmod.click();
-    
-	  WebElement geofence = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Geofence Create']")));
-	    
-	    JavascriptExecutor js=(JavascriptExecutor)driver;
+      WebElement geofence = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Geofence Create']")));
+	   JavascriptExecutor js=(JavascriptExecutor)driver;
 	  js.executeScript("arguments[0].scrollIntoView({ block: 'center' });",geofence);
     
    
@@ -43,16 +41,16 @@ public void InterestCreate() throws InterruptedException
 	 sl.selectByIndex(4);*/
 	 
 	 //sl.selectByVisibleText("Mtech Mumbai");
-	 
+	    Thread.sleep(2000);
 	 WebElement Bname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='BranchNameSelect']")));
 	    Bname.click();   
 	    /* Select ddBname =new Select(Bname);
 	    ddBname.selectByIndex(4);
 	    Bname.click();   */
 	    WebElement POInumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@tabindex='3']")));
-	    POInumber.sendKeys("nashik");
+	    POInumber.sendKeys("Punepimplegurav"); //change this value
 	
-	    
+	    Thread.sleep(2000);
 	    WebElement POIType= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//Select[@tabindex='4']")));
 	   POIType.click();
 	  Select ddPOIType =new Select(POIType);
@@ -60,9 +58,9 @@ public void InterestCreate() throws InterruptedException
 	    
 	    POIType.click(); 
 	    
-
+	    Thread.sleep(2000);
 	    WebElement 	Descriptions= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@tabindex='5']")));
-	    Descriptions.sendKeys("nashik");
+	    Descriptions.sendKeys("pune");
 	    WebElement 	Tolerance= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='txtTolerance']")));
 	    Tolerance.sendKeys("20");
 	    
@@ -71,16 +69,17 @@ public void InterestCreate() throws InterruptedException
 	    SelectVeh.click();	
 	    Select ddvehicle =new Select(SelectVeh);
 	    ddvehicle.selectByIndex(4);
-	    
+	    Thread.sleep(2000);
 	    WebElement 	showPoi= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@tabindex='8']")));    
 	    showPoi.click();
 	        
 	    WebElement 	search= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='pac-input']")));    
 	    search.sendKeys("pune");
-	  
+	    Thread.sleep(3000);
+	    
 	    WebElement 	savebtn= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@tabindex='10']")));    
 	    savebtn.click();
-	    
+	    Thread.sleep(2000);
 	    WebElement 	acttext= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='ctl00_ContentPlaceHolder2_lblMsg']")));   
 	   String acmesg =acttext.getText().trim();
 	   System.out.println(acmesg);
@@ -93,19 +92,7 @@ public void InterestCreate() throws InterruptedException
 	    
 	 
 	    
-	    
-	   
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+    
 
 	    
 	    

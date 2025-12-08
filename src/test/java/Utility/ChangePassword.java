@@ -16,8 +16,7 @@ public class ChangePassword extends baseLoginTest {
 	
 	   Login loginPage = new Login(driver);
        loginPage.loginTest("Admin", "Admin@123$");
-
-       
+       Thread.sleep(3000);
        
        WebElement utility = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Utility']")));
        utility.click();
@@ -41,7 +40,7 @@ public class ChangePassword extends baseLoginTest {
     WebElement  textmsg= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='ctl00_ContentPlaceHolder2_lblMsg']")));
     String ActualMessge=textmsg.getText().trim(); 
     System.out.println(" act message is:"   +ActualMessge);
-   String expeMess="New Password and Old password same not allow..!";
+   String expeMess="New Password and Old password same not allow...!";
    System.out.println(" expt message is:"   +expeMess);
    Assert.assertTrue(ActualMessge.equalsIgnoreCase(expeMess));
     

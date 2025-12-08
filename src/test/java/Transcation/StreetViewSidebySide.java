@@ -10,13 +10,13 @@ import baseData.Login;
 import baseData.baseLoginTest;
 
 public class StreetViewSidebySide extends baseLoginTest{
-
+	//It’s movable, so it cannot be automated.
 	@Test
 	public void showview() throws InterruptedException
 	{
 		 Login loginPage = new Login(driver);
 	      loginPage.loginTest("Admin", "Admin@123$");
-	        
+	      Thread.sleep(3000);
 	
 	WebElement transmod =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 	transmod.click();

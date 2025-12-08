@@ -19,7 +19,7 @@ public class VTSLive extends baseLoginTest {
 	{
 		 Login loginPage = new Login(driver);
 	        loginPage.loginTest("Admin", "Admin@123$");
-	        
+	        Thread.sleep(2000);
 	WebDriverWait wait1 =new WebDriverWait(driver, Duration.ofSeconds(30));
 	WebElement transmod =wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 	transmod.click();
@@ -36,12 +36,11 @@ public class VTSLive extends baseLoginTest {
 	
   
   Select sl =new Select(drpdevice); 
-  sl.selectByIndex(10);
+  sl.selectByIndex(7);
   drpdevice.click();
+
   
-  
-  
-  
+  Thread.sleep(2000);
   
  /* List<WebElement> allop=sl.getAllSelectedOptions(); 
   for(int i=0;i<allop.size();i++) 
@@ -51,17 +50,11 @@ public class VTSLive extends baseLoginTest {
   
   }*/
     
-  
-
 	WebDriverWait wait4 =new WebDriverWait(driver, Duration.ofSeconds(30));
-	WebElement track=wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='Track_Vehicle']']")));
+	WebElement track=wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='Track_Vehicle']")));
 	track.click();
 	
 
-
-	
-	
-  
   
   
 }

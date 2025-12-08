@@ -22,14 +22,14 @@ public class CreateUser extends baseLoginTest {
    
         Login loginPage = new Login(driver);
         loginPage.loginTest("Admin", "Admin@123$");
-
+        Thread.sleep(3000);
         WebElement utility = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Utility']")));
         utility.click();
         WebElement createUser = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Create User']")));
         createUser.click();
 
         WebElement Username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtUserName']")));
-        Username.sendKeys("Admin");
+        Username.sendKeys("Admin1");
         Thread.sleep(1000);
 
         WebElement UserType = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='ctl00_ContentPlaceHolder2_ddlUserType']")));
@@ -44,12 +44,12 @@ public class CreateUser extends baseLoginTest {
 
         WebElement datepicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtSubscriptionValidFrom']")));
         datepicker.clear();
-        datepicker.sendKeys("25/11/2025");
+        datepicker.sendKeys("08/12/2025");
         datepicker.sendKeys(Keys.ENTER);
 
         WebElement datepicker1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtSubscriptionValidTill']")));
         datepicker1.clear();
-        datepicker1.sendKeys("29/11/2025");
+        datepicker1.sendKeys("10/12/2025");
         datepicker1.sendKeys(Keys.ENTER);
 
         WebElement selectvehicle = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[text()='OD15SP2052']")));
@@ -74,26 +74,31 @@ public class CreateUser extends baseLoginTest {
         WebElement upload1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_btnUpload']")));
         upload1.click();
 
+      WebElement password1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtUserPWD']")));
+      password1.sendKeys("Testing@123$");
 
-        TakesScreenshot takes1 = (TakesScreenshot) driver;
-     File src =takes1.getScreenshotAs(OutputType.FILE);
- File dir = new File("D:\\Sushmita.Project_Data\\1TestProjects\\3.vts\\AutomationScriptsData\\screenshot");
-    
- if (!dir.exists()) {
-          dir.mkdirs();
-      }
-
-      File name1 = new File(dir, "bug23.png");
-     FileUtils.copyFile(src,name1);
-      
-      Thread.sleep(3000)
-;
+  
+      WebElement confpassword1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtConfPWD']")));
+      confpassword1.sendKeys("Testing@123$");
+   
       WebElement savevbtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_btnSave']")));
       savevbtn.click();
         
        
       Thread.sleep(3000)
       ;
+      TakesScreenshot takes1 = (TakesScreenshot) driver;
+   File src =takes1.getScreenshotAs(OutputType.FILE);
+File dir = new File("D:\\Sushmita.Project_Data\\1TestProjects\\3.vts\\AutomationScriptsData\\screenshot");
+  
+if (!dir.exists()) {
+        dir.mkdirs();
+    }
+      File name1 = new File(dir, "bug23.png");
+     FileUtils.copyFile(src,name1);
+      
+      Thread.sleep(3000);
+
    
       TakesScreenshot takes2 = (TakesScreenshot) driver;
       File srcFile = takes2.getScreenshotAs(OutputType.FILE);
@@ -107,7 +112,6 @@ public class CreateUser extends baseLoginTest {
          File destFile = new File(dir3, "emptypasswordfeild.png");
          FileUtils.copyFile(srcFile, destFile);
    
-         
       
       
 

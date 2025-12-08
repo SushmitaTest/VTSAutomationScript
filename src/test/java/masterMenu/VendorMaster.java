@@ -74,13 +74,13 @@ public class VendorMaster extends baseLoginTest{
 				Vendaddr.sendKeys("ReturnCom");	
 				
 				
-				
+				Thread.sleep(3000);
 				WebElement chbox= wait8.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_chkActive']")));
 				chbox.click();
-				
+				Thread.sleep(5000);
 				WebElement savebtn= wait8.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_btnSave']")));
 				savebtn.click();
-				
+				Thread.sleep(5000);
 				WebElement clearbtn= wait8.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ID='ctl00_ContentPlaceHolder2_btnClear']")));
 				clearbtn.click();
 				

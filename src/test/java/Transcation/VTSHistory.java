@@ -22,7 +22,7 @@ public class VTSHistory extends baseLoginTest {
 		
 		 Login loginPage = new Login(driver);
 	        loginPage.loginTest("Admin", "Admin@123$");
-	        
+	        Thread.sleep(2000); 
 		WebDriverWait wait1 =new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement transmod =wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 		transmod.click();

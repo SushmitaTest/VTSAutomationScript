@@ -66,7 +66,7 @@ import baseData.baseLoginTest;
     		datePicker1.clear();
     		WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
     		WebElement datePickerS = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtStartDate']")));
-    		datePickerS.sendKeys("06/12/2025");
+    		datePickerS.sendKeys("08/12/2025");
     		
     		Thread.sleep(3000);
     		WebElement timeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[1]")));
@@ -77,7 +77,7 @@ import baseData.baseLoginTest;
     		WebElement datePickerS2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtendDate']")));
     		Thread.sleep(3000);
     		JavascriptExecutor datepicker2=(JavascriptExecutor)driver;
-    		datepicker2.executeScript("arguments[0].value='06/12/2025';",datePickerS2);
+    		datepicker2.executeScript("arguments[0].value='08/12/2025';",datePickerS2);
     
     		Thread.sleep(3000);
     		WebElement timeout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='time'])[2]")));

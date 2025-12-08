@@ -20,7 +20,7 @@ public class OTACommandSetting extends baseLoginTest
 	{
 	Login loginPage = new Login(driver);
      loginPage.loginTest("Admin", "Admin@123$");
-
+     Thread.sleep(3000);
      wait =new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement transmod = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
 		transmod.click();

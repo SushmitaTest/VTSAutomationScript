@@ -13,23 +13,23 @@ public class TransactionRouteDefine extends baseLoginTest {
 
     @Test
     public void createRouteTest() throws Exception {
-Login loginPage = new Login(driver);
+        Login loginPage = new Login(driver);
         loginPage.loginTest("Admin", "Admin@123$");
-
+        Thread.sleep(3000);
     
         WebElement transaction = wait.until( ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Transaction']")));
         transaction.click();
-
+        Thread.sleep(3000);
         WebElement routeDefine = wait.until(
-  ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='VTS Route Define']")));
+       ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='VTS Route Define']")));
         routeDefine.click();
 
-       
+        Thread.sleep(3000);
         TransactionRouteDefines routePage = new TransactionRouteDefines(driver, wait);
-
+        Thread.sleep(3000);
         routePage.createRoute("New Route","Hinjewadi, Pune, Maharashtra, India",
                 "Kalewadi Phata",
-                "Swargate");
+                "Pune, Maharashtra, India");
         
         
     }

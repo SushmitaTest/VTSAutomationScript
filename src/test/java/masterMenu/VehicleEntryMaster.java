@@ -96,18 +96,16 @@ public class VehicleEntryMaster extends baseLoginTest{
 		WebElement vehval= wait12.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_txtVehicleValidity']")));
 		vehval.sendKeys("01/11/2031");
 	 
-	 
-
+		Thread.sleep(3000);
 		WebDriverWait wait13= new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement chek= wait13.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='checkbox']")));
 		chek.click();
+		Thread.sleep(3000);
 		WebElement savebtn= wait13.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ctl00_ContentPlaceHolder2_btnSave']")));
 		savebtn.click();
-		
+		Thread.sleep(3000);
 		WebElement clearbtn= wait13.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@ID='ctl00_ContentPlaceHolder2_btnClear']")));
 		clearbtn.click();
-		Thread.sleep(3000);
-
 
 	}
 	 
